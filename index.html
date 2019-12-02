@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/d548f0427a.js" crossorigin="anonymous"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -30,27 +31,51 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="About">About</a>
+          <a class="nav-link" href="#About">About</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <div class="container" id="bot_or_not_viewer">
-    <img style="padding: 10px" src="https://i.redd.it/stgpvoiw41241.jpg" alt="Oops looks like you're FUUUUCKKKED!">
-    <div class="row justify-content-around" id="choice_buttons">
-      <button class="col-sm btn btn-success btn-lg">Bot</button>
-      <button class="col-sm offset-sm-1 btn btn-danger btn-lg" >Not Bot</button>
+  <div class="container" style="padding: 100px;"id="bot_or_not_viewer">
+    <div class="d-flex justify-content-center mb-5 mt-5">
+      <div hidden class="spinner-border " role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <div id="tweet_block">
+      <blockquote class="twitter-tweet tw-align-center">
+        <p lang="en" dir="ltr">
+          Something very big has just happened!</p>
+        &mdash; Donald J. Trump (@realDonaldTrump)
+        <a href="https://twitter.com/realDonaldTrump/status/1188264965930700801?ref_src=twsrc%5Etfw">October 27, 2019</a>
+      </blockquote>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="row justify-content-md-center mt-3" id="choice_buttons">
+      <button class="btn btn-success btn-lg">Bot</button>
+      <button class="btn offset-sm-1 btn-danger btn-lg" >Not Bot</button>
     </div>
   </div>
 
   <div class="container mt-5" id="About">
     <h1 class="display-1">About</h1>
-    <p class="">
-      The Twitter Analysis Tool team are looking to construct a dataset to test against our tool to identify malicious bots on twitter. <br>
-      In order to judge success we need to determine what the human success rate is at determining malicious bots. <br>
+    <h2>TwitterBot or Not</h2>
+    <p class="lead">
+      "TwitterBot or Not" was made to create a dataset for the
+      <a href="http://www.cci.drexel.edu/SeniorDesign/2019_2020/TAT/TAT-index.html">
+        Twitter Analysis Tool
+      </a> Senior Design project at Drexel University.<br>
+      TAT uses machine learning to detect malicious bots on Twitter, we need to create a dataset to see if our tool can beat a human.
+      <br><br>
       Thanks for your help!
     </p>
+  </div>
+  <div id="footer" class="container">
+    <div class="row justify-content-center">
+      <p class="col-md-">Created By Chris Bakopoulos &nbsp;|&nbsp;</p>
+      <p class="col-md-">Checkout the code on my <a href="https://github.com/ChristianBako">Github</a> <i class="fab fa-github-square"></i> </p>
+    </div>
   </div>
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
@@ -59,10 +84,10 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- Google Analytics -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+    ga('create', 'UA-153681534-1', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
