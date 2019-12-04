@@ -6,7 +6,7 @@
   <meta name="description" content="Eyo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="doc/site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
@@ -23,41 +23,50 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">TAT</a>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#About">About</a>
-        </li>
-      </ul>
-    </div>
+    <a href="http://www.cci.drexel.edu/SeniorDesign/2019_2020/TAT/TAT-index.html">
+      <img style="height:50%; width:50%" alt="TAT" src="img/tat_icon_125x125.png">
+    </a>
   </nav>
 
-  <div class="container" style="padding: 100px;"id="bot_or_not_viewer">
+  <!-- Signup Flow and Bot or not picker -->
+  <div class="container" style="padding: 100px;" id="bot_or_not_viewer">
+    <form id="signup_form">
+      <div class="form-group">
+        <label for="TAT_signup">Email address</label>
+        <input type="email" class="form-control" id="TAT_signup" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">Enter your email address to sign up for the Amazon gift card!</small>
+      </div>
+      <button id="signup_submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
     <div class="d-flex justify-content-center mb-5 mt-5">
       <div hidden class="spinner-border " role="status">
         <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <div id="tweet_block">
-      <blockquote class="twitter-tweet tw-align-center">
-        <p lang="en" dir="ltr">
-          Something very big has just happened!</p>
-        &mdash; Donald J. Trump (@realDonaldTrump)
-        <a href="https://twitter.com/realDonaldTrump/status/1188264965930700801?ref_src=twsrc%5Etfw">October 27, 2019</a>
-      </blockquote>
-    </div>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <div class="row justify-content-md-center mt-3" id="choice_buttons">
-      <button class="btn btn-success btn-lg">Bot</button>
-      <button class="btn offset-sm-1 btn-danger btn-lg" >Not Bot</button>
+
+    <div id="bot_or_not_view">
+      <div id="tweet_block">
+        <blockquote class="twitter-tweet tw-align-center">
+          <p lang="en" dir="ltr">
+            Something very big has just happened!</p>
+          &mdash; Donald J. Trump (@realDonaldTrump)
+          <a href="https://twitter.com/realDonaldTrump/status/1188264965930700801?ref_src=twsrc%5Etfw">October 27, 2019</a>
+        </blockquote>
+      </div>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <div class="row justify-content-md-center mt-3" id="bot_or_not_buttons">
+        <button class="btn btn-secondary btn-lg" id="bot_button_placeholder">Sign up with your email to get started!</button>
+        <button hidden class="btn btn-success btn-lg" id="bot_button" >Bot</button>
+        <button hidden class="btn offset-sm-1 btn-danger btn-lg" id="not_bot_button" >Not Bot</button>
+      </div>
     </div>
   </div>
 
+  <!-- Flavor Text about TAT -->
   <div class="container mt-5" id="About">
     <h1 class="display-1">About</h1>
     <h2>TwitterBot or Not</h2>
@@ -71,10 +80,12 @@
       Thanks for your help!
     </p>
   </div>
+
+  <!-- Footer -->
   <div id="footer" class="container">
     <div class="row justify-content-center">
       <p class="col-md-">Created By Chris Bakopoulos &nbsp;|&nbsp;</p>
-      <p class="col-md-">Checkout the code on my <a href="https://github.com/ChristianBako">Github</a> <i class="fab fa-github-square"></i> </p>
+      <p class="col-md-">Checkout the code on my <a href="https://github.com/ChristianBako/twitter_bot_or_not">Github</a> <i class="fab fa-github-square"></i> </p>
     </div>
   </div>
 
